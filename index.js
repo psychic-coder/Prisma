@@ -2,6 +2,7 @@ import express from "express"
 import cookieParser from "cookie-parser"
 import dotenv from "dotenv"
 import userRouter from "./routes/userRoutes.js"
+import postRouter from "./routes/postRoutes.js"
 
 const app=express()
 dotenv.config({path:"./.env"});
@@ -19,6 +20,7 @@ app.get("/",(req,res)=>{
     res.send("Hello world!")
 })
 app.use("/api",userRouter)
+app.use("/api",postRouter)
 
 
 app.listen(3000,()=>{
