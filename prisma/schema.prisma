@@ -1,8 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+//for next js --> "npx prisma migrate dev" -->it is used to create a table in the database
+//for next js-->"npx prisma generate"--->it generates a client in the files
 
 generator client {
   provider   = "prisma-client-js"
@@ -14,6 +11,10 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+
+
+
 
 // @map-->it means that id will be treated as " _id " in the mongodb
 //String? indicates that this is an optional or nullable string type
