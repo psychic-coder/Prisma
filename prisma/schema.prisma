@@ -1,5 +1,7 @@
+//whenever we create a schema , we need to migrate the db and migrate the client
 //for next js --> "npx prisma migrate dev" -->it is used to create a table in the database
 //for next js-->"npx prisma generate"--->it generates a client in the files
+//and after we make any change in the schemas we have to re migrate the database
 
 generator client {
   provider   = "prisma-client-js"
